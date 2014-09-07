@@ -1,31 +1,61 @@
 Restberry-Errors
 ================
 
+Output error JSONs for common HTTP responses.
+
 ## Install
 
 ```
 npm install restberry-errors
 ```
 
+## Usage
+
+```
+var errors = require('restberry-errors');
+
+var err = ...
+new errors.BadRequest(err, req, res, function(err) {
+    ...
+});
+```
+
 ## Response examples
+
+* **400** BAD REQUEST
+```
+2014-09-07T21:01:05.365Z|127.0.0.1|POST|/api/v1/users/540cc791ee94cdb74098beef|<{
+  "email": "test@restberry.com",
+  "password": "**********"
+}>
+2014-09-07T21:01:05.367Z|127.0.0.1|400|<{
+  "error": {
+    "statusCode": 400,
+    "property": "",
+    "title": "Bad Request",
+    "message": "Invalid password, needs to be at lest 8 characters long",
+    "devMessage": "Requested <POST> </api/v1/users/540cc791ee94cdb74098beef> with data <{\"email\": \"test@restberry.com\", \"password\":\"**********\"}>."
+  }
+}>
+```
 
 * **401** UNAUTHORIZED
 ```
-2014-05-11T13:26:27.758Z|172.16.122.129|GET|</api/v1/foos/536f7a835bc82212a9e78624> <{}>
+2014-05-11T13:26:27.758Z|172.16.122.129|GET|/api/v1/foos/536f7a835bc82212a9e78624|<{}>
 2014-05-11T13:26:27.758Z|172.16.122.129|401|<{
   "error": {
     "statusCode": 401,
     "property": "",
     "title": "Unauthorized",
     "message": "Need to be logged in to perform this action.",
-    "devMessage": "Requested <GET> </api/v1/foos/536f7a835bc82212a9e78624> with data <{}>. Make sure you are logged in and authenticated. {}"
+    "devMessage": "Requested <GET> </api/v1/foos/536f7a835bc82212a9e78624> with data <{}>. Make sure you are logged in and authenticated."
   }
 }>
 ```
 
 * **403** FORBIDDEN
 ```
-2014-05-11T13:26:27.758Z|172.16.122.129|GET|</api/v1/foos/536f7a835bc82212a9e78624> <{}>
+2014-05-11T13:26:27.758Z|172.16.122.129|GET|/api/v1/foos/536f7a835bc82212a9e78624|<{}>
 2014-05-11T13:26:27.758Z|172.16.122.129|403|<{
   "error": {
     "statusCode": 403,
@@ -39,7 +69,7 @@ npm install restberry-errors
 
 * **409** CONFLICT
 ```
-2014-05-11T11:55:55.368Z|172.16.122.129|POST|</api/v1/foos> <{
+2014-05-11T11:55:55.368Z|172.16.122.129|POST|/api/v1/foos|<{
   "name": "test"
 }>
 2014-05-11T11:55:55.358Z|172.16.122.129|409|<{
@@ -55,7 +85,7 @@ npm install restberry-errors
 
 * **500** SERVER ISSUE
 ```
-2014-05-11T13:23:37.820Z|172.16.122.129|POST|</api/v1/foos> <{
+2014-05-11T13:23:37.820Z|172.16.122.129|POST|/api/v1/foos|<{
   "name": "test"
 }>
 2014-05-11T13:23:37.821Z|172.16.122.129|500|<{

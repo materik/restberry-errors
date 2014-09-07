@@ -1,15 +1,4 @@
 {
-    "name": "restberry-errors",
-    "version": "0.1.0",
-    "description": "",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/materik/restberry-errors.git"
-    },
-    "keywords": [
-        "restberry"
-    ],
     "author": {
         "name": "Mattias Eriksson",
         "email": "materik@me.com"
@@ -20,14 +9,24 @@
             "email": "materik@me.com"
         }
     ],
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/materik/restberry-errors/issues"
     },
     "dependencies": {
         "http-status": "0.1.x",
-        "restberry-logger": "0.1.x",
         "restberry-utils": "0.1.x"
     },
-    "homepage": "http://restberry.com"
+    "description": "Output error JSONs for common HTTP responses.",
+    "homepage": "http://restberry.com",
+    "keywords": [
+        "restberry"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "restberry-errors",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/materik/restberry-errors.git"
+    },
+    "version": "0.1.0"
 }
