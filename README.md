@@ -98,3 +98,9 @@ new errors.BadRequest(err, req, res, function(err) {
   }
 }>
 ```
+
+## Run the tests
+
+```
+npm test
+```

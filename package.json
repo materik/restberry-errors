@@ -28,5 +28,8 @@
         "type": "git",
         "url": "https://github.com/materik/restberry-errors.git"
     },
-    "version": "0.1.1"
+    "scripts": {
+        "test": "nodeunit ./test.js"
+    },
+    "version": "0.2.0"
 }
