@@ -14,9 +14,18 @@ npm install restberry-errors
 ```
 var errors = require('restberry-errors');
 
-var err = ...
-new errors.BadRequest(err, req, res, function(err) {
-    ...
+var err = {message: 'An error happened...'};
+new errors.BadRequest(err, function(err) {
+    console.log(err);
+    // {
+    //   error: {
+    //      statusCode: 400,
+    //      property: '',
+    //      title: 'Bad Request',
+    //      message: 'An error happened...',
+    //      devMessage: '<{message: \'An error happened...\'}>'
+    //   },
+    // }
 });
 ```
 
