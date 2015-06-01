@@ -17,6 +17,9 @@
         "restberry-utils": "0.1.x"
     },
     "description": "Output error JSONs for common HTTP responses.",
+    "devDependencies": {
+        "underscore": "1.8.x"
+    },
     "homepage": "http://restberry.com",
     "keywords": [
         "restberry"
@@ -31,5 +34,5 @@
     "scripts": {
         "test": "nodeunit ./test.js"
     },
-    "version": "0.2.1"
+    "version": "0.2.2"
 }
