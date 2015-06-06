@@ -14,10 +14,12 @@
     },
     "dependencies": {
         "http-status": "0.1.x",
-        "restberry-utils": "0.1.x"
+        "restberry-utils": "1.0.x"
     },
     "description": "Output error JSONs for common HTTP responses.",
     "devDependencies": {
+        "jscs": "1.12.x",
+        "jshint": "2.6.x",
         "underscore": "1.8.x"
     },
     "homepage": "http://restberry.com",
@@ -32,7 +34,8 @@
         "url": "https://github.com/materik/restberry-errors.git"
     },
     "scripts": {
-        "test": "nodeunit ./test.js"
+        "test": "mocha ./test.js",
+        "validate": "jscs **/*.js && jshint **/*.js"
     },
-    "version": "0.2.2"
+    "version": "1.0.0"
 }
