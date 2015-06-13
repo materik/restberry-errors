@@ -1,12 +1,12 @@
 {
     "author": {
         "name": "Mattias Eriksson",
-        "email": "materik@me.com"
+        "email": "thematerik@gmail.com"
     },
     "contributors": [
         {
             "name": "Mattias Eriksson",
-            "email": "materik@me.com"
+            "email": "thematerik@gmail.com"
         }
     ],
     "bugs": {
@@ -37,5 +37,5 @@
         "test": "mocha ./test.js",
         "validate": "jscs **/*.js && jshint **/*.js"
     },
-    "version": "1.0.0"
+    "version": "1.0.1"
 }
