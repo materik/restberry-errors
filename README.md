@@ -3,7 +3,7 @@ Restberry-Errors
 
 [![](https://img.shields.io/npm/v/restberry-errors.svg)](https://www.npmjs.com/package/restberry-errors) [![](https://img.shields.io/npm/dm/restberry-errors.svg)](https://www.npmjs.com/package/restberry-errors)
 
-Output error JSONs for common HTTP responses.
+Restberry HTTP error handler.
 
 ## Install
 

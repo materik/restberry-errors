@@ -16,7 +16,7 @@
         "http-status": "0.1.x",
         "restberry-utils": "1.0.x"
     },
-    "description": "Output error JSONs for common HTTP responses.",
+    "description": "Restberry HTTP error handler",
     "devDependencies": {
         "jscs": "1.12.x",
         "jshint": "2.6.x",
@@ -37,5 +37,5 @@
         "test": "mocha ./test.js",
         "validate": "jscs **/*.js && jshint **/*.js"
     },
-    "version": "1.0.1"
+    "version": "1.0.2"
 }
